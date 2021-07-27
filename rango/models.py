@@ -36,8 +36,7 @@ class Page(models.Model):
         return self.title
     
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    
+    user = models.OneToOneField(User, on_delete=models.CASCADE)  
     website = models.URLField(blank=True)
     picture = models.ImageField(upload_to='profile_image', blank=True)
     
